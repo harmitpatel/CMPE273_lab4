@@ -13,7 +13,7 @@ private final Properties properties = new Properties();
 
 public SimpleProducer() {
 	
-        properties.put("metadata.broker.list", "54.149.84.25:9092");
+        properties.put("metadata.broker.list", "54.68.83.161:9092");
         properties.put("serializer.class", "kafka.serializer.StringEncoder");
         properties.put("request.required.acks", "1");
         producer = new Producer<>(new ProducerConfig(properties));

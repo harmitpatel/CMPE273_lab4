@@ -37,7 +37,7 @@ public class ExPollScheduler
         		if(expired_Poll.get(i).isFlag() != true)
 				{
         			
-        			producer.kafka("cmpe273-topic", expired_Poll.get(i).getModerator().getEmail() + ":010124634:Poll Result [" + expired_Poll.get(i).getChoice()[0] + "=" + expired_Poll.get(i).getResults()[0] + " , " + expired_Poll.get(i).getChoice()[1] + " = " + expired_Poll.get(i).getResults()[1]);
+        			producer.kafka("cmpe273-new-topic", expired_Poll.get(i).getModerator().getEmail() + ":010124634:Poll Result [" + expired_Poll.get(i).getChoice()[0] + "=" + expired_Poll.get(i).getResults()[0] + " , " + expired_Poll.get(i).getChoice()[1] + " = " + expired_Poll.get(i).getResults()[1]);
         			System.out.println("Condition Satified!!!");
         			poll = expired_Poll.get(i);
         			poll.setFlag(true);
