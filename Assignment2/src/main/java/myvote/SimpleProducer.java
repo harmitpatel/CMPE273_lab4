@@ -1,4 +1,4 @@
-package SMSVoting;
+package myvote;
 
 import kafka.javaapi.producer.Producer;
 import kafka.producer.KeyedMessage;
@@ -22,11 +22,22 @@ public SimpleProducer() {
 public void kafka(String topic, String msg) {
 	
 new SimpleProducer();
+//String topic = args[0];
+////String msg = args[1];
 KeyedMessage<Integer, String> data = new KeyedMessage<>(topic, msg);
         producer.send(data);
         producer.close();
         
     }
 
-
+/*
+public static void main(String[] args) {
+new SimpleProducer();
+String topic = "cmpe273-topic";
+String msg = "mbarve@live.com:010125505:Poll Result [Android=100,iPhone=200]";
+KeyedMessage<Integer, String> data = new KeyedMessage<>(topic, msg);
+        producer.send(data);
+        producer.close();
+    }
+*/
 }
